@@ -1,6 +1,6 @@
 import React from 'react';
-import img1 from '../../assets/img.jpg'
-import img2 from '../../assets/imgs.jpg'
+import img1 from '../../assets/img.png'
+import img2 from '../../assets/imgs.png'
 
 function Product() {
   return (

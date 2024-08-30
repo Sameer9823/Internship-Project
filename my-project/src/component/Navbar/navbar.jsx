@@ -1,12 +1,12 @@
 import React from 'react'
-import img from '../../assets/logo.jpg'
+import img from '../../assets/logo.png'
 import { IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
 function Navbars() {
   return (
     <div>
-        <div className="navbar bg-[#7cc0f4] px-5 py-3 flex items-center fixed w-full z-30 shadow-lg">
+        <div className="navbar bg-[#bbecff] px-5 py-3 flex items-center fixed w-full z-30 shadow-lg">
   <div className="navbar-start">
   <img  className='w-[225px] h-[48px]' src={img} alt="" srcset="" />
     <div className="dropdown">
@@ -28,9 +28,9 @@ function Navbars() {
         <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><Link to="/products">Product</Link></li>
          
       
-      <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><a>News & Events</a></li>
+      <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><Link to="/event">News & Events</Link></li>
       <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><a>Awards</a></li>
-      <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><a>Our Clients</a></li>
+      <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><Link to="/demo">Demo</Link></li>
       <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><a>Career</a></li>
     </ul>
   </div>
@@ -70,9 +70,9 @@ function Navbars() {
           </ul>
         </details>
       </li>
-      <li><a>News & Events</a></li>
+      <li><Link to='/event'>News & Events</Link></li>
       <li><a>Awards</a></li>
-      <li><a>Our Clients</a></li>
+      <li><Link to="/demo">Demo</Link></li>
       <li><a>Career</a></li>
       <li><Link to="/contact">Contact Us</Link> </li>
     </ul>

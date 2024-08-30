@@ -24,7 +24,7 @@ function Footer() {
     <a className="link link-hover hover:text-[#ffff]">Privacy policy</a>
     <a className="link link-hover hover:text-[#ffff]">Cookie policy</a>
   </nav>
-  <form>
+  <form className='hidden sm:block lg:block md:block'>
     <h6 className="footer-title">Newsletter</h6>
     <fieldset className="form-control w-80">
       <label className="label">
