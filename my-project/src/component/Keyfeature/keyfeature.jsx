@@ -10,13 +10,13 @@ import img from '../../assets/demo.png'
 function Keyfeature() {
   return (
     <div>
+      <h1 className="text-4xl font-extrabold text-sky-600 text-center mt-[3rem]">Leading Figure</h1>
       <div
         className="hero lg:w-[1230px] h-auto lg:ml-[7.6rem] lg:h-[700px] mt-[5rem]"
         style={{
           backgroundImage: "url(https://th.bing.com/th/id/OIP.zXuo7vnjwiyRfo0qr_AMQwHaE8?w=282&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7)",
         }}
       >
-          <h1 className="text-2xl font-bold mb-[39rem] text-black mt-2">Leading Figure</h1>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-neutral-content text-center">
           {/* Added h1 here */}

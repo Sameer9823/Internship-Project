@@ -1,26 +1,34 @@
 import React from 'react';
-import vid from '../../assets/video.mp4'
+import vid from '../../assets/video.mp4';
+import poster from '../../assets/drone.png'
 
 function Main() {
   return (
-    <div>
-     
-
-      <div className='pt-[5.5rem] flex justify-center gap-[2rem] items-center mb-[5rem] flex-wrap'>
+    <div className="bg-gray-50 h-auto py-7">
+      <div className='pt-[5.5rem] flex justify-center gap-[2rem] items-center mb-[5rem] flex-wrap px-4'>
        
-        <div className='w-[800px]'>
-          <video src={vid} autoPlay controls controlsList='nodownload' loop ></video>
+      <div className='w-full md:w-[800px] flex justify-center shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 ease-in-out'>
+  <video 
+    src={vid} 
+    autoPlay 
+    controls 
+    controlsList='nodownload' 
+    loop 
+    className='w-full h-auto rounded-lg'
+    poster={poster}
+  />
+</div>
 
-      </div>
-        <div className='w-[500px] font-bold text-black px-2'>
-          <p>Introducing the Agribot MX, a groundbreaking agricultural drone designed to revolutionize modern farming practices. This state-of-the-art drone is engineered with cutting-edge technology to significantly enhance agricultural productivity and sustainability.
 
-The Agribot MX is equipped with advanced sensors and imaging systems for precise crop monitoring. Its high-resolution cameras and multispectral sensors provide real-time, detailed insights into crop health and soil conditions, enabling farmers to make informed decisions and take proactive measures. This precision allows for targeted interventions, minimizing waste and maximizing crop yield.
-
-
-
-The Agribot MX also excels in real-time data collection and analysis. Its integrated data management system aggregates information from various sensors and provides actionable insights through a user-friendly interface. This data-driven approach helps farmers to optimize their operations, monitor crop growth, and assess field conditions with unparalleled accuracy.
-</p>
+        <div className='w-full md:w-[500px] font-bold text-gray-800 px-4'>
+          <h2 className='text-3xl text-sky-600 mb-4'>Agribot MX: Revolutionizing Modern Farming</h2>
+          <p className='text-lg leading-relaxed'>
+            Introducing the <span className="text-green-700">Agribot MX</span>, a groundbreaking agricultural drone designed to revolutionize modern farming practices. This state-of-the-art drone is engineered with cutting-edge technology to significantly enhance agricultural productivity and sustainability.
+          </p>
+          <p className='text-lg leading-relaxed mt-4'>
+            The Agribot MX is equipped with advanced sensors and imaging systems for precise crop monitoring. Its high-resolution cameras and multispectral sensors provide real-time, detailed insights into crop health and soil conditions, enabling farmers to make informed decisions and take proactive measures. This precision allows for targeted interventions, minimizing waste and maximizing crop yield.
+          </p>
+       
         </div>
         
       </div>

@@ -8,7 +8,7 @@ function Navbars() {
     <div>
         <div className="navbar bg-[#bbecff] px-5 py-3 flex items-center fixed w-full z-30 shadow-lg">
   <div className="navbar-start">
-  <img  className='w-[225px] h-[48px]' src={img} alt="" srcset="" />
+  <img  className='lg:w-[225px] lg:h-[48px] w-[200px] h-[30px]' src={img} alt="" srcset="" />
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
       </div>
@@ -30,12 +30,12 @@ function Navbars() {
       
       <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><Link to="/event">News & Events</Link></li>
       <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><a>Awards</a></li>
-      <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><Link to="/demo">Demo</Link></li>
+      <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><Link to="/demo">Testimonials</Link></li>
       <li className='text-[#003366] hover:text-[#ffff] hover:bg-[#5957cf] hover:font-semibold hover:border-2 hover:border-[#67e46d] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)] hover:duration-500'><a>Career</a></li>
     </ul>
   </div>
   <div className="navbar-end hidden lg:inline-flex">
-    <Link to="/contact" className="btn hover:text-[#0066B3] hover:bg-[#E0E0E0] hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)]">CONTACT US</Link>
+    <Link to="/contact" className="btn bg-green-400 hover:text-white hover:bg-green-500 hover:shadow-[0_4px_6px_rgba(0,0,0,0.2)]">CONTACT US</Link>
    
   </div>
   <div className="navbar-end drawer drawer-end lg:hidden">
@@ -49,30 +49,15 @@ function Navbars() {
     <ul className="menu bg-base-200 text-base-content min-h-full w-52 p-4">
       {/* Sidebar content here */}
       <li><Link to="/">Home</Link> </li>
-      <li><a>About</a></li>
-      <li>
-        <details>
-          <summary>Product</summary>
-          <ul className="p-2">
-          <li><Link to="/products">Products</Link></li>
-           
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Network</summary>
-          <ul className="p-2">
-            <li><a>Submenu </a></li>
-            <li><a>Submenu </a></li>
-            <li><a>Submenu </a></li>
-            <li><a>Submenu </a></li>
-          </ul>
-        </details>
-      </li>
+      <li><Link to='/about'>About</Link></li>
+    
+      <li><Link to="/products">Products</Link></li>
+         
+      
+     
       <li><Link to='/event'>News & Events</Link></li>
       <li><a>Awards</a></li>
-      <li><Link to="/demo">Demo</Link></li>
+      <li><Link to="/demo">Testimonials</Link></li>
       <li><a>Career</a></li>
       <li><Link to="/contact">Contact Us</Link> </li>
     </ul>
