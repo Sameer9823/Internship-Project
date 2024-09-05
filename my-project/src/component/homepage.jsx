@@ -5,7 +5,7 @@ import Keyfeature from "./Keyfeature/keyfeature"
 import Navbars from "./Navbar/navbar"
 import News from "./News/news"
 import Product from "./Product/product"
-import Testimonial from "./Testimonial/testimonial"
+
 
 
 function Homepage() {
@@ -16,7 +16,7 @@ function Homepage() {
      <About/>
      <Product/>
      <Keyfeature/>
-     <Testimonial/>
+   
      <News/>
     
     </div>
