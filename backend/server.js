@@ -24,32 +24,15 @@ db.once('open', () => {
 });
 
 // Contact Schema
-const contactSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: {
-    type: String,
-    required: true,
-    validate: {
-      validator: function (v) {
-        // Regex for validating email
-        return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v);
-      },
-      message: (props) => `${props.value} is not a valid email!`,
-    },
+const contactSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    phone: { type: String, required: true },
+    message: { type: String, required: true },
   },
-  phone: {
-    type: String,
-    required: true,
-    validate: {
-      validator: function (v) {
-        // Regex for validating phone number
-        return /^\d{10}$/.test(v);
-      },
-      message: (props) => `${props.value} is not a valid phone number!`,
-    },
-  },
-  message: { type: String, required: true },
-});
+  { timestamps: true }
+);
 
 const Contact = mongoose.model('Contact', contactSchema);
 
@@ -57,6 +40,12 @@ const Contact = mongoose.model('Contact', contactSchema);
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, phone, message } = req.body;
+
+    // Check if a contact with the same email already exists
+    const existingContact = await Contact.findOne({ email });
+    if (existingContact) {
+      return res.status(400).json({ error: 'Email already registered' });
+    }
 
     // Create a new contact entry
     const newContact = new Contact({ name, email, phone, message });
@@ -66,6 +55,10 @@ app.post('/api/contact', async (req, res) => {
 
     res.status(201).json({ message: 'Contact saved successfully!' });
   } catch (error) {
+    if (error.code === 11000) {
+      // Duplicate email error
+      return res.status(400).json({ error: 'Email already registered' });
+    }
     res.status(400).json({ error: error.message });
   }
 });
