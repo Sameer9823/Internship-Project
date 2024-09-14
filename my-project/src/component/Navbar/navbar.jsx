@@ -16,7 +16,7 @@ function Navbars() {
             <li className='text-[#003366] hover:text-white hover:bg-[#5957cf] transition duration-300'><Link to="/about">About</Link></li>
             <li className='text-[#003366] hover:text-white hover:bg-[#5957cf] transition duration-300'><Link to="/products">Product</Link></li>
             <li className='text-[#003366] hover:text-white hover:bg-[#5957cf] transition duration-300'><Link to="/event">News & Events</Link></li>
-            <li className='text-[#003366] hover:text-white hover:bg-[#5957cf] transition duration-300'><a>Awards</a></li>
+            <li className='text-[#003366] hover:text-white hover:bg-[#5957cf] transition duration-300'><Link to='/govern'>Schemes</Link></li>
             <li className='text-[#003366] hover:text-white hover:bg-[#5957cf] transition duration-300'><Link to="/demo">Testimonials</Link></li>
           </ul>
         </div>

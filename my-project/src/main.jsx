@@ -12,6 +12,7 @@ import Homepage from './component/homepage.jsx'
 import Navabout from './component/NavAbout/NavAbout.jsx'
 import Events from './component/Events/events.jsx'
 import Demo from './component/Demo/Demo.jsx'
+import Scheme from './component/Scheme/Scheme.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,8 @@ const router = createBrowserRouter(
       <Route path='products' element={<Products />} />
       <Route path='event' element={<Events />} />
       <Route path='demo' element={<Demo />} />
+      <Route path='govern' element={<Scheme />} />
+
       
     </Route>
   )
