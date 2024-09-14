@@ -16,7 +16,7 @@ const GovernmentSchemePage = () => {
       </header>
 
       {/* Image Section */}
-      <section className="text-center mb-8 flex justify-center px-[8rem]">
+      <section className="text-center mb-8 flex justify-center lg:px-[8rem] px-0">
         <img 
           src={kisanDroneImage} 
           alt="Funds for Kisan Drones"
@@ -49,7 +49,7 @@ const GovernmentSchemePage = () => {
 
       {/* Footer Section */}
      
-      <section className="text-center mb-8 mt-8 px-[8rem]">
+      <section className="text-center mb-8 mt-8 lg:px-[8rem] px-0">
         <img 
           src={kisanDroneImage1} 
           alt="Funds for Kisan Drones"
