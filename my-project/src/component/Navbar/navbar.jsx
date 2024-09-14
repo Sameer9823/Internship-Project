@@ -35,7 +35,7 @@ function Navbars() {
               <li><Link to='/about'>About</Link></li>
               <li><Link to="/products">Products</Link></li>
               <li><Link to='/event'>News & Events</Link></li>
-              <li><a>Awards</a></li>
+              <li><Link to='/govern'>Schemes</Link></li>
               <li><Link to="/demo">Testimonials</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>
