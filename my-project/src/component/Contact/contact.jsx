@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { HiPhone } from "react-icons/hi";
-import axios from 'axios';
+import emailjs from 'emailjs-com';
 import AnimatedImage from '../Drone';
 
 function Contact() {
@@ -13,6 +13,9 @@ function Contact() {
     message: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [stateMessage, setStateMessage] = useState(null);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -22,36 +25,59 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
-      alert(response.data.message);
-    } catch (error) {
-      alert(error.response.data.error);
-    }
+    setIsSubmitting(true);
+
+    // Use environment variables in Vite with import.meta.env
+    emailjs.sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_PUBLIC_KEY
+    ).then(
+      (result) => {
+        setStateMessage('Message sent successfully!');
+        setIsSubmitting(false);
+        setTimeout(() => setStateMessage(null), 8000); // Hide message after 5 seconds
+      },
+      (error) => {
+        setStateMessage('Something went wrong, please try again later.');
+        setIsSubmitting(false);
+        setTimeout(() => setStateMessage(null), 5000); // Hide message after 5 seconds
+      }
+    );
+
+    e.target.reset(); // Clear form after submission
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+    });
   };
 
   return (
-    <div className="relative pt-[2rem]"> {/* Set relative positioning to contain the absolute drone */}
-      <div className="pt-20 pb-10" 
-       style={{
-        backgroundImage: "url('https://cdn.pixabay.com/photo/2020/06/23/06/54/dji-5331597_1280.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundBlendMode: "overlay",
-      }}
+    <div className="relative pt-[2rem]">
+      <div
+        className="pt-20 pb-10"
+        style={{
+          backgroundImage: "url('https://cdn.pixabay.com/photo/2020/06/23/06/54/dji-5331597_1280.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundBlendMode: "overlay",
+        }}
       >
         <div className="w-full md:w-1/2 lg:w-1/3 hidden lg:block">
           <AnimatedImage />
         </div>
-        <div
-  className="max-w-4xl mx-auto p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-lg"
-  style={{
-    background: "rgba(255, 255, 255, 0.2)", // Semi-transparent white background
-    backdropFilter: "blur(10px)", // Blurs the content behind the div
-    border: "1px solid rgba(255, 255, 255, 0.3)", // Optional border for a sharp glass effect
-  }}
->
 
+        <div
+          className="max-w-4xl mx-auto p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.2)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+          }}
+        >
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between ">
             {/* Form Section */}
             <div className="md:w-1/2 p-4">
@@ -104,15 +130,19 @@ function Contact() {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="w-full p-3 bg-green-600 text-white rounded-md hover:bg-green-700">
-                  Send Message
+                <button
+                  type="submit"
+                  className="w-full p-3 bg-green-600 text-white rounded-md hover:bg-green-700"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
+              {stateMessage && <p className="mt-4 text-green-600">{stateMessage}</p>}
             </div>
 
             {/* Info Section */}
             <div className="md:w-1/2 p-4 flex flex-col items-center text-center mt-8 md:mt-0">
-             
               <p className="text-blue-900 font-semibold mb-2">
                 1234 Your Street, Your City, Your State, 12345
               </p>
@@ -145,13 +175,11 @@ function Contact() {
           </div>
         </div>
 
-        {/* Drone Animation Section */}
-      {/* Drone Animation Positioned at Bottom Right */}
-      <div className="lg:ml-[80%] md:mx-[19rem]  lg:mb-[8rem] lg:mt-0 mb-[8rem] mx-[4rem] lg:mx-0">
-        <AnimatedImage />
+        {/* Drone Animation Positioned at Bottom Right */}
+        <div className="lg:ml-[80%] md:mx-[19rem] lg:mb-[8rem] lg:mt-0 mb-[8rem] mx-[4rem] lg:mx-0 hidden lg:block md:block sm:block">
+          <AnimatedImage />
+        </div>
       </div>
-      </div>
-
     </div>
   );
 }
