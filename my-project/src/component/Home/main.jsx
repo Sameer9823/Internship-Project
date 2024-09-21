@@ -21,11 +21,11 @@ function Main() {
 
 
         <div className='w-full md:w-[500px] font-bold text-gray-800 px-4'>
-          <h2 className='text-3xl text-sky-600 mb-4'>Agribot MX: Revolutionizing Modern Farming</h2>
-          <p className='text-lg leading-relaxed'>
+          <h2 className='text-3xl text-sky-600 mb-4 text-center'>Agribot MX: Revolutionizing Modern Farming</h2>
+          <p className='text-md leading-relaxed lg:text-left md:text-left text-center'>
             Introducing the <span className="text-green-700">Agribot MX</span>, a groundbreaking agricultural drone designed to revolutionize modern farming practices. This state-of-the-art drone is engineered with cutting-edge technology to significantly enhance agricultural productivity and sustainability.
           </p>
-          <p className='text-lg leading-relaxed mt-4'>
+          <p className='text-md leading-relaxed mt-4 lg:text-left md:text-left text-center'>
             The Agribot MX is equipped with advanced sensors and imaging systems for precise crop monitoring. Its high-resolution cameras and multispectral sensors provide real-time, detailed insights into crop health and soil conditions, enabling farmers to make informed decisions and take proactive measures. This precision allows for targeted interventions, minimizing waste and maximizing crop yield.
           </p>
        

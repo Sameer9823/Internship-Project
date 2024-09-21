@@ -1,6 +1,10 @@
 import React from 'react';
+import img1 from '../../assets/eknath.png'
+import img2 from '../../assets/mod.jpg'
+import img3 from '../../assets/nitin.jpg'
 
 function News() {
+
   return (
     <div className="bg-gray-50 py-16">
       <h1 className="text-4xl font-extrabold text-center text-sky-600 mb-12">News & Articles</h1>
@@ -11,15 +15,14 @@ function News() {
           <figure>
             <img
               className="w-full h-48 object-cover"
-              src="https://th.bing.com/th/id/OIP.pLdhoJ1d2z_MKT1XmNl8AQHaEK?w=316&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              src={img1}
               alt="News"
             />
           </figure>
           <div className="card-body p-6">
-            <h2 className="card-title text-2xl font-bold text-gray-800 mb-2">Latest News</h2>
-            <p className="text-gray-500 mb-4">July 22, 2024</p>
+            <h2 className="card-title text-2xl font-bold text-gray-800 mb-2"> AGRIBOT Drone Scheme Launch in Maharashtra</h2>
             <p className="text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro soluta neque dolore saepe sed, quae eligendi rem corrupti in error odio consequatur doloribus ut nisi quas repellendus nemo necessitatibus amet labore quam! Tenetur vitae dicta dolores, eligendi dolore molestias corporis?
+            Maharashtra CM Eknath Shinde has launched the AGRIBOT Drone Subsidy under the SMAM initiative, introducing the first subsidized drone to enhance farming with advanced technology. This program aims to boost productivity and modernize agricultural practices, promoting sustainable farming and resource efficiency across the state.
             </p>
           </div>
         </div>
@@ -29,15 +32,14 @@ function News() {
           <figure>
             <img
               className="w-full h-48 object-cover"
-              src="https://th.bing.com/th/id/OIP.pLdhoJ1d2z_MKT1XmNl8AQHaEK?w=316&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              src={img2}
               alt="News"
             />
           </figure>
           <div className="card-body p-6">
-            <h2 className="card-title text-2xl font-bold text-gray-800 mb-2">Industry Updates</h2>
-            <p className="text-gray-500 mb-4">July 22, 2024</p>
+            <h2 className="card-title text-2xl font-bold text-gray-800 mb-2"> Prime Minister Narendra Modi Observes AGRIBOT Drone Technology Display</h2>
             <p className="text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro soluta neque dolore saepe sed, quae eligendi rem corrupti in error odio consequatur doloribus ut nisi quas repellendus nemo necessitatibus amet labore quam! Tenetur vitae dicta dolores, eligendi dolore molestias corporis?
+            PM Modi expressed interest in the advancements and discussed the impact of such innovations on India's journey towards sustainable and modern farming practices. This event underscores the government's commitment to integrating cutting-edge technology in agriculture for enhanced productivity.
             </p>
           </div>
         </div>
@@ -46,16 +48,16 @@ function News() {
         <div className="card bg-white lg:w-96 w-80 shadow-xl rounded-lg overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
           <figure>
             <img
-              className="w-full h-48 object-cover"
-              src="https://th.bing.com/th/id/OIP.pLdhoJ1d2z_MKT1XmNl8AQHaEK?w=316&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              className="w-full h-48"
+              src={img3}
               alt="News"
             />
           </figure>
           <div className="card-body p-6">
-            <h2 className="card-title text-2xl font-bold text-gray-800 mb-2">Technology Insights</h2>
-            <p className="text-gray-500 mb-4">July 22, 2024</p>
+            <h2 className="card-title text-2xl font-bold text-gray-800 mb-2">Demonstration for Shri Nitin Gadkari</h2>
             <p className="text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro soluta neque dolore saepe sed, quae eligendi rem corrupti in error odio consequatur doloribus ut nisi quas repellendus nemo necessitatibus amet labore quam! Tenetur vitae dicta dolores, eligendi dolore molestias corporis?
+            A live AGRIBOT drone demonstration was presented to Shri Nitin Gadkari, showcasing advancements in agricultural technology. The drones support precision farming, improve crop management, and promote sustainable agriculture. Shri Gadkari praised the initiative for its potential to boost productivity and modernize Indian farming practices.
+
             </p>
           </div>
         </div>

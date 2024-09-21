@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import img from '../../assets/modiji.png'
 
 function Events() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -12,14 +13,14 @@ function Events() {
   };
 
   return (
-    <div className='pt-[5rem]'>
+    <div className='pt-[4rem]'>
 
       {/* Background Image */}
       <div>
         <img 
-          src="https://i.pinimg.com/originals/94/a3/c0/94a3c09ca076b4d4df90654889f6d431.jpg" 
+          src={img} 
           alt="Background" 
-          className='h-[700px] w-full object-cover'
+          className='w-full'
         />
       </div>
 
