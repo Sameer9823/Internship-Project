@@ -2,6 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 function Navabout() {
+  const handleButtonClick = () => {
+    window.open('https://www.example.com', '_blank'); 
+  };
   return (
     <div className="bg-gray-50 py-24 px-4 font-poppins">
       {/* Hero Section */}
@@ -41,19 +44,12 @@ function Navabout() {
           transition={{ duration: 1.5 }}
         >
           <h2 className="text-3xl font-semibold text-gray-800 leading-snug text-center">
-            The Future of Farming is Here
+          What We Do?
           </h2>
           <p className="mt-4 text-gray-600 leading-relaxed font-normal">
-            Agribot A6 is designed to support farmers in adopting precision agriculture techniques
-            that boost crop yield, save time, and reduce costs. Our mission is to empower farmers
-            by providing them with cutting-edge drone technology to optimize their farming
-            practices.
+          We are proud to be an authorized dealer of Iotech in Maharashtra, offering a wide range of Iotech drones, parts, and accessories. Our products are designed to meet the needs of modern farmers, enabling them to optimize productivity with cutting-edge technology. In addition to sales, we provide comprehensive support for government subsidy programs and schemes, helping customers take full advantage of available financial assistance. Whether you're looking to purchase drones or need expert guidance on government initiatives, our team is here to assist you in every step of the process to ensure a smooth and successful experience.
           </p>
-          <p className="mt-4 text-gray-600 leading-relaxed font-normal">
-            We’re proud to be a key player in the agricultural ecosystem, distributing drones all
-            over Maharashtra and assisting farmers in securing government subsidies for modern
-            farming equipment.
-          </p>
+          
         </motion.div>
       </div>
 
@@ -67,6 +63,15 @@ function Navabout() {
         >
           Helping Farmers with Government Subsidies
         </motion.h2>
+        <div className='flex justify-center mt-6'>
+            <button 
+              onClick={handleButtonClick} 
+              className='bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300'
+            >
+              Click for Government Subsidies
+            </button>
+          </div>
+
         <motion.p
           className="mt-4 text-lg text-gray-700 font-medium leading-relaxed"
           initial={{ opacity: 0, y: 50 }}

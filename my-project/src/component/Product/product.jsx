@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../assets/img3.png'
+import img1 from '../../assets/offer.png'
 import img2 from '../../assets/img4.png'
 
 function Product() {
@@ -8,7 +8,7 @@ function Product() {
       
 
       <div className="lg:mt-[8rem] mt-[2rem]">
-      <h1 className='text-4xl font-extrabold text-sky-600'>Our Product</h1>
+      <h1 className='text-4xl font-extrabold text-sky-600'>Products Offering</h1>
       <div className='flex justify-center mt-[3rem]'>
 
         <img className='border-[1px] border-[black] w-[83%]' src={img1} alt="" />

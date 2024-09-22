@@ -1,6 +1,6 @@
 import React from 'react';
 import { Star, ChevronDown } from 'lucide-react';
-import img from '../../assets/AGRIBOT-A6.png';
+import img from '../../assets/drone.png';
 
 function Products() {
   return (
