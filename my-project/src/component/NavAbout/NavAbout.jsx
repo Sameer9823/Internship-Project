@@ -73,7 +73,7 @@ function Navabout() {
           </div>
 
         <motion.p
-          className="mt-4 text-lg text-gray-700 font-medium leading-relaxed"
+          className="mt-4 text-lg text-gray-700 font-medium leading-relaxed md:px-[25rem] px-0"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
