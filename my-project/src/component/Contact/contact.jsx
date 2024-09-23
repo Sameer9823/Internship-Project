@@ -154,10 +154,11 @@ function Contact() {
   </p>
   
   <p className="text-blue-900 mb-2">
-    Mobile: +91 7499013846
+    Mobile: +91 9049976655
+    Mobile: +91 9579903629
   </p>
   <p className="text-blue-900 mb-4">
-    E-Mail: mayur.dhandale@surgisol.in
+    E-Mail: enquiry@envirosoln.in
   </p>
 </div>
 
