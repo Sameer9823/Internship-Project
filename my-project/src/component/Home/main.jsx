@@ -23,7 +23,7 @@ function Main() {
           </div>
 
           {/* Text Section */}
-          <div className='w-full md:w-1/3 lg:w-[35%] font-bold text-gray-800 px-4'>
+          <div className='w-full md:w-1/3 lg:w-[35%] font-bold text-gray-800 lg:px-4 md:px-4 px-0'>
             <h2 className='text-2xl text-sky-600 mb-4 text-center'>Agribot MX: Revolutionizing Modern Farming</h2>
             <p className='text-sm leading-relaxed lg:text-left md:text-left text-center'>
               Introducing the <span className="text-green-700">Agribot MX</span>, a groundbreaking agricultural drone designed to revolutionize modern farming practices. This state-of-the-art drone is engineered with cutting-edge technology to significantly enhance agricultural productivity and sustainability.

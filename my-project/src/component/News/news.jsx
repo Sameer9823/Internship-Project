@@ -7,7 +7,7 @@ function News() {
 
   return (
     <div className="bg-gray-50 py-16">
-      <h1 className="text-4xl font-extrabold text-center text-sky-600 mb-12">News & Articles</h1>
+      <h1 className="lg:text-4xl text-2xl font-extrabold text-center text-sky-600 mb-12">News & Articles</h1>
       <div className="flex justify-center flex-wrap gap-[1rem] lg:gap-8 px-4">
         
         {/* News Card */}

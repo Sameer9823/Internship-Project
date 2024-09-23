@@ -7,9 +7,27 @@ function Navbars() {
   return (
     <div>
       <div className="navbar bg-[#bbecff] px-5 py-3 flex items-center fixed w-full z-30 shadow-lg">
-        <div className="navbar-start">
-          <img className='lg:w-[225px] lg:h-[48px] w-[200px] h-[30px]' src={img} alt="Logo" />
-        </div>
+      <div className="navbar-start flex items-center">
+  {/* Main logo with responsive sizing */}
+  <div className=' border-r border-black'>
+
+  <img 
+    className="w-[150px] h-[30px] lg:w-[225px] lg:h-[48px] object-contain" 
+    src={img} 
+    alt="Logo" 
+  />
+  </div>
+  
+  {/* Spacer and secondary logo */}
+ 
+    <img 
+      className="w-[80px] h-[30px] lg:w-[100px] lg:h-[48px] object-contain" 
+      src="https://iotechworld.com/wp-content/uploads/2023/03/Logo_90x90.png" 
+      alt="Secondary Logo" 
+    />
+
+</div>
+
         <div className="navbar-center text-[#003366] hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-lg">
             <li className='text-[#003366] hover:text-white hover:bg-[#5957cf] transition duration-300'><Link to="/">Home</Link></li>

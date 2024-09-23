@@ -11,12 +11,30 @@ function Footer() {
           <br />
           
         </p> */}
-        <p className='font-bold'>IOTECH Drones – Suppliers and distributors of drones, parts, and accessories.</p>
-        <p className='font-bold'>Authorized Dealer of IOTECH all over Maharashtra.</p>
+        <div className=" p-4 flex flex-col items-center text-center ">
+  <p className="text-blue-900 font-semibold ">
+    SurgiSol Healthcare Solution Pvt Ltd
+  </p>
+  <p className="text-blue-900 ">
+    Flat No. 2 Prince Complex, Above Saini Travels, Chhatrapati Sq., Nagpur
+  </p>
+  <p className="text-blue-900 ">
+    State: Maharashtra, Pin code: 440015
+  </p>
+  
+  <p className="text-blue-900">
+    Mobile: +91 9049976655
+    <br />
+    {/* Mobile: +91 9579903629 */}
+  </p>
+  <p className="text-blue-900">
+    E-Mail: enquiry@envirosoln.in
+  </p>
+</div>
         <p>Copyright © {new Date().getFullYear()} - All rights reserved</p>
       </aside>
 
-      <nav className="mt-4">
+      <nav className="">
         <div className="grid grid-flow-col gap-6 text-blue-600">
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <svg

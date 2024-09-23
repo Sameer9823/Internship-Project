@@ -80,7 +80,7 @@ function Contact() {
         >
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between ">
             {/* Form Section */}
-            <div className="md:w-1/2 p-4">
+            <div className="md:w-1/2 p-4 w-full">
               <h2 className="text-2xl font-bold text-blue-900 mb-6">Contact Us</h2>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="relative">
@@ -143,21 +143,22 @@ function Contact() {
 
             {/* Info Section */}
             <div className="md:w-1/2 p-4 flex flex-col items-center text-center mt-8 md:mt-0">
-  <p className="text-blue-900 font-semibold mb-2">
+  <p className="text-[#0d0d4b] font-semibold mb-2 ">
     SurgiSol Healthcare Solution Pvt Ltd
   </p>
-  <p className="text-blue-900 mb-2">
+  <p className="text-[#0d0d4b] mb-2 ">
     Flat No. 2 Prince Complex, Above Saini Travels, Chhatrapati Sq., Nagpur
   </p>
-  <p className="text-blue-900 mb-2">
+  <p className="text-[#0d0d4b] mb-2 ">
     State: Maharashtra, Pin code: 440015
   </p>
   
-  <p className="text-blue-900 mb-2">
+  <p className="text-[#0d0d4b] mb-2">
     Mobile: +91 9049976655
+    <br />
     Mobile: +91 9579903629
   </p>
-  <p className="text-blue-900 mb-4">
+  <p className="text-[#0d0d4b] mb-4">
     E-Mail: enquiry@envirosoln.in
   </p>
 </div>
