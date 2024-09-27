@@ -30,9 +30,8 @@ function Footer() {
   <p className="text-blue-900">
     E-Mail: enquiry@envirosoln.in
   </p>
-</div>
-        <p>Copyright © {new Date().getFullYear()} - All rights reserved</p>
-      </aside>
+</div> 
+</aside>
 
       <nav className="">
         <div className="grid grid-flow-col gap-6 text-blue-600">
@@ -68,6 +67,11 @@ function Footer() {
           </a>
         </div>
       </nav>
+      <p style={{ textAlign: 'center', fontSize: '14px', color: '#555' }}>
+  Copyright © {new Date().getFullYear()} - All rights reserved. <br />
+  <span style={{ fontWeight: 'bold', color: '#007BFF' }}>Designed by Iceico Technology Pvt Ltd</span>
+</p>
+
     </footer>
   )
 }
