@@ -33,14 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host = 'sandbox.smtp.mailtrap.io'; // Mailtrap SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = '2c58f3573b5665'; // Mailtrap username
-        $mail->Password = 'e973387ac39e7e'; // Mailtrap password
+        $mail->Username = '0f97bd9e955c7a'; // Mailtrap username
+        $mail->Password = 'f9c12e5821650d'; // Mailtrap password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Encryption
-        $mail->Port = 2525; // Port for Mailtrap
+        $mail->Port = 587; // TLS port (alternative ports: 25, 465, 2525)
 
         // Email headers
-        $mail->setFrom('test@example.com', 'Your Name'); // Sender details
-        $mail->addAddress('sameerselokar9823@gmail.com'); // Recipient email
+        $mail->setFrom('factsbyai3@gmail.com', 'Enviro Solution'); // Correct sender email
+        $mail->addAddress('factsbyai3@gmail.com'); // Correct recipient email
 
         // Email content
         $mail->isHTML(true);

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { HiPhone } from "react-icons/hi";
+import AnimatedImage from '../Drone'
 import validator from 'validator'; // Import the validator library
 
 function Contact() {
@@ -89,12 +90,17 @@ function Contact() {
 
   return (
     <div className="relative pt-[2rem]">
+      
       <div className="pt-20 pb-10" style={{
         backgroundImage: "url('https://cdn.pixabay.com/photo/2020/06/23/06/54/dji-5331597_1280.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",
       }}>
+        <div className='hidden md:block'>
+
+        <AnimatedImage />
+        </div>
         <div className="max-w-4xl mx-auto p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-lg" style={{
           background: "rgba(255, 255, 255, 0.2)",
           backdropFilter: "blur(10px)",

@@ -24,7 +24,7 @@ function Products() {
             </div>
             <div className="mt-10 w-full lg:mt-0 lg:w-[500px] lg:pl-10">
               <h2 className="text-sm font-bold tracking-widest text-indigo-600 uppercase">Agribot</h2>
-              <h1 className="my-4 text-3xl font-extrabold text-gray-900">Agribot A6</h1>
+              <h1 className="my-4 text-3xl font-extrabold text-gray-900">Agribot MX</h1>
              
               <p className="leading-relaxed text-gray-700">
               Agribot A6 is an advanced agriculture drone designed to revolutionize farming practices by offering precision, efficiency, and cost-effectiveness. This high-performance drone is equipped with state-of-the-art features tailored specifically for modern agricultural needs, helping farmers maximize their crop yield and minimize manual labor.
