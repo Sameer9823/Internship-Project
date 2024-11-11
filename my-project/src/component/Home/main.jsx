@@ -1,39 +1,26 @@
 import React from 'react';
-import vid from '../../assets/video.mp4';
-import poster from '../../assets/drone.png';
+import vid from '../../assets/waste.mp4';
 
 function Main() {
   return (
-    <div className="bg-gray-50 h-auto py-7 pt-[5.5rem]">
-      <div className="max-w-[1400px] mx-auto bg-white rounded-lg shadow-xl border border-gray-200 p-8">
-        {/* Flex container for row alignment, with responsive classes */}
-        <div className='flex flex-col md:flex-row justify-center gap-[2rem] items-center px-4'>
+    <div className="relative h-screen w-full overflow-hidden">
+      {/* Full-screen background video */}
+      <video 
+        src={vid} 
+        autoPlay 
+        loop 
+        muted 
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      />
 
-          {/* Video Section */}
-          <div className='w-full md:w-2/3 lg:w-[65%] flex justify-center shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 ease-in-out'>
-            <video 
-              src={vid} 
-              autoPlay 
-              controls 
-              controlsList='nodownload' 
-              loop 
-              className='w-full h-auto rounded-lg'
-              poster={poster}
-            />
-          </div>
-
-          {/* Text Section */}
-          <div className='w-full md:w-1/3 lg:w-[35%] font-bold text-gray-800 lg:px-4 md:px-4 px-0'>
-            <h2 className='text-2xl text-sky-600 mb-4 text-center'>Agribot MX: Revolutionizing Modern Farming</h2>
-            <p className='text-sm leading-relaxed lg:text-left md:text-left text-center'>
-              Introducing the <span className="text-green-700">Agribot MX</span>, a groundbreaking agricultural drone designed to revolutionize modern farming practices. This state-of-the-art drone is engineered with cutting-edge technology to significantly enhance agricultural productivity and sustainability.
-            </p>
-            <p className='text-sm leading-relaxed mt-4 lg:text-left md:text-left text-center'>
-              The Agribot MX is equipped with advanced sensors and imaging systems for precise crop monitoring. Its high-resolution cameras and multispectral sensors provide real-time, detailed insights into crop health and soil conditions, enabling farmers to make informed decisions and take proactive measures.
-            </p>
-          </div>
-
-        </div>
+      {/* Overlay with centered text */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center px-4">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-sky-400">
+          Leading Waste Management Solution
+        </h1>
+        <p className="mt-4 text-lg md:text-xl lg:text-2xl text-gray-200 max-w-2xl">
+          Our innovative solutions leverage cutting-edge technology to effectively manage waste, reduce environmental impact, and promote sustainability. Join us in creating a cleaner and greener future.
+        </p>
       </div>
     </div>
   );

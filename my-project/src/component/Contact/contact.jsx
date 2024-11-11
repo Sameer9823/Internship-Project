@@ -92,7 +92,7 @@ function Contact() {
     <div className="relative pt-[2rem]">
       
       <div className="pt-20 pb-10" style={{
-        backgroundImage: "url('https://cdn.pixabay.com/photo/2020/06/23/06/54/dji-5331597_1280.jpg')",
+        backgroundImage: "url('https://wallpaperaccess.com/full/1164084.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",

@@ -29,18 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $mail = new PHPMailer(true);
     try {
-        // Mailtrap SMTP configuration
+        // Your SMTP configuration from the image
         $mail->isSMTP();
-        $mail->Host = 'sandbox.smtp.mailtrap.io'; // Mailtrap SMTP server
+        $mail->Host = 'mail.envirosoln.in'; // SMTP server (from the image)
         $mail->SMTPAuth = true;
-        $mail->Username = '0f97bd9e955c7a'; // Mailtrap username
-        $mail->Password = 'f9c12e5821650d'; // Mailtrap password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Encryption
-        $mail->Port = 587; // TLS port (alternative ports: 25, 465, 2525)
+        $mail->Username = '_mainaccount@envirosoln.in'; // Your email (from the image)
+        $mail->Password = 'wu?m?ozf2qzyE'; // Use your actual cPanel password here
+        $mail->SMTPSecure = 'ssl'; // Encryption
+        $mail->Port = 465; // SMTP Port (from the image)
 
         // Email headers
-        $mail->setFrom('factsbyai3@gmail.com', 'Enviro Solution'); // Correct sender email
-        $mail->addAddress('factsbyai3@gmail.com'); // Correct recipient email
+        $mail->setFrom('_mainaccount@envirosoln.in', 'Enviro Solution'); // Sender email
+        $mail->addAddress('_mainaccount@envirosoln.in'); // Recipient email
 
         // Email content
         $mail->isHTML(true);
