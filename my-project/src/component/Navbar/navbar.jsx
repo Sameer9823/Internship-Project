@@ -134,7 +134,7 @@ function Navbars() {
                 {isDropdownOpen && (
                   <ul className="p-2">
                     <li><Link to="products">Agriculture Drone</Link></li>
-                    <li><Link to="/products/waste-management">Waste Management</Link></li>
+                    <li><Link to="waste">Waste Management</Link></li>
                   </ul>
                 )}
               </li>
